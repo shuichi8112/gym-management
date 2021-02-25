@@ -19,14 +19,14 @@ default: &default
 
 development:
   <<: *default
-  database: gym_management_development
+  database: gym_management_34017_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: gym_management_test
+  database: gym_management_34017_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: gym_management_production
-  username: gym_management
-  password: <%= ENV['GYM_MANAGEMENT_DATABASE_PASSWORD'] %>
+  database: gym_management_34017_production
+  username: gym_management_34017
+  password: <%= ENV['gym_management_34017_DATABASE_PASSWORD'] %>
