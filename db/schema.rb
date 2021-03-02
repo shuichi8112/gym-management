@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_095632) do
 
   create_table "clients", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "gender_id", null: false
+    t.string "gender", null: false
     t.string "address", null: false
     t.string "phone_number", null: false
     t.string "email", null: false
@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 2021_02_25_095632) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "name", null: false
+    t.string "occupation", null: false
     t.text "profile", null: false
-    t.integer "occupation", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
