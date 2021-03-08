@@ -2,3 +2,5 @@
   <%= form.text_field :keyword, placeholder: "顧客を検索する", class: "search-input" %>
   <%= form.submit "検索", class: "search-btn" %>
 <% end %>
+
+<%= link_to "ログアウト",  destroy_user_session_path, method: :delete%>

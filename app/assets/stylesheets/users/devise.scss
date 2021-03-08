@@ -1,0 +1,60 @@
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 100px 75px 100px;
+  display: block;
+  flex: 1;
+  flex-basis: auto;
+  box-sizing: border-box;
+}
+
+.main-edit{
+  max-width: 960px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 0px 75px 100px;
+  display: block;
+  flex: 1;
+  flex-basis: auto;
+  box-sizing: border-box;
+}
+
+.form-control {
+  border: 1px solid #dcdfe6;
+  font-size: inherit;
+}
+
+.gym-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.text-success {
+  font-size: 30px;
+}
+
+.devise-card {
+  border: none;
+} 
+
+.form-wrap bg-dark{
+  max-width: 400px;
+  width: 100%;
+  margin: 50px auto;
+}
+.devise-link {
+  text-align: center;
+  margin: 16px 0;
+}
+
+.error-title{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.error-text{
+  list-style: none;
+}
