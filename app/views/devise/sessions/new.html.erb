@@ -3,8 +3,7 @@
     <div class="form-wrap">
       <div class="form-group text-center">
         <p class="text-success">SIXPACKがお客様を変える！</p>
-        <%= image_tag "gym-logo.png", class:"gym-icon"%>
-        
+        <%= image_tag "gym-logo.png", class:"gym-icon-user"%>
       </div>
       <%= form_with scope: resource, as: resource_name, url: registration_path(resource_name), local: true do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
