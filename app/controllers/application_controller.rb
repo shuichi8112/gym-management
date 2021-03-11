@@ -9,13 +9,20 @@ class ApplicationController < ActionController::Base
       :sign_up, keys: [:name, :profile, :occupation]
     )
   end
+
+  def after_sign_in_path_for(resource)
+    clients_path
+  end
+
+  def after_sign_up_path_for(resource)
+    clients_path
+  end
+
+
   private
-
-  
-
   def basic_auth
     authenticate_or_request_with_http_basic do |username, password|
-      username == ENV["BASIC_AUTH_USER"] && password == ENV["BASIC_AUTH_PASSWORD"]
+    username == ENV["BASIC_AUTH_USER"] && password == ENV["BASIC_AUTH_PASSWORD"]
     end
   end
 end
