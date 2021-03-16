@@ -2,16 +2,32 @@
 
 <%= render "shared/header" %>
   <div class='wrapper'>
-    
     <div class='main'>
       <%= form_with(url: search_clients_path, local: true, method: :get, class: "search-form") do |form| %>
         <%= form.text_field :keyword, placeholder: "顧客を検索する", class: "search-input" %>
         <%= form.submit "検索", class: "search-btn" %>
       <% end %>
     </div>
-
   </div>
-  <%= link_to("#", class: 'new-btn') do %>
+
+  <main class="main">
+   <div class="inner">
+     <% if user_signed_in? %>
+      <div class="greeting">
+        こんにちは、
+        <%= link_to current_user.name, "#", method: :get, class: :greeting__link %>
+        さん
+      </div>
+     <% end %>
+    
+    <div class="card__wrapper">
+      <%# <%= render partial: 'client', collection: @clients  %> 
+      
+    </div>
+   </div>
+  </main>
+
+  <%= link_to(new_client_path, class: 'new-btn') do %>
       <span class='new-btn-text'>新規作成</span>
       <%= image_tag 'new.png' , size: '185x50' ,class: "new-btn-icon" %>
   <% end %>
