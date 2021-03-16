@@ -1,25 +1,20 @@
 
 
-<body>
+<%= render "shared/header" %>
   <div class='wrapper'>
-    <%= render "shared/header" %>
+    
     <div class='main'>
-      <%= image_tag "gym-logo.png", class:"gym-icon"%>
-
       <%= form_with(url: search_clients_path, local: true, method: :get, class: "search-form") do |form| %>
         <%= form.text_field :keyword, placeholder: "顧客を検索する", class: "search-input" %>
         <%= form.submit "検索", class: "search-btn" %>
       <% end %>
-
-      <%= link_to "ログアウト",  destroy_user_session_path, method: :delete %>
     </div>
 
-  <%= link_to "#", class: 'new-btn' do %>
-    <span class='new-btn-text'>新規作成</span>
-    <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "new-btn-icon" %>
+  </div>
+  <%= link_to("#", class: 'new-btn') do %>
+      <span class='new-btn-text'>新規作成</span>
+      <%= image_tag 'new.png' , size: '185x50' ,class: "new-btn-icon" %>
   <% end %>
 
 
-    <%= render "shared/footer" %>
-  </div>
-</body>
+<%= render "shared/footer" %>

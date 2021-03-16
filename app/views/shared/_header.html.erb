@@ -5,9 +5,6 @@
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="顧客名を検索" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    <li class='nav-item active'>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete,type:"button",class: "nav-link" %>
-    <li>
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">ログアウト</button>
+    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn btn-outline-success my-2 my-sm-0" %>
   </form>
 </nav>
