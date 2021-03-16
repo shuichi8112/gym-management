@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: 10vh;
+}
+
+.gym-icon {
+  
+  height: 10vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

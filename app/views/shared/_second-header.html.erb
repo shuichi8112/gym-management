@@ -1,3 +1,9 @@
-<header class='second-header'>
-  <%= link_to image_tag("gym-logo2.png", class:"second-logo"), "/" %>
-</header>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand">
+    <%= image_tag "gym-logo2.png", class:"gym-icon"%>
+  </a>
+  <form class="form-inline">
+    <%= "#{@user}さんがログイン中" %>
+    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn btn-outline-success my-2 my-sm-0" %>
+  </form>
+</nav>
