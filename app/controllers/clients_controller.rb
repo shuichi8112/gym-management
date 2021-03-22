@@ -6,8 +6,10 @@ class ClientsController < ApplicationController
   def new
     @client = Client.new
   end
-
+  
+  
   def create
+    binding.pry
     @client = Client.new
     if @client.save
       redirect to clients path
