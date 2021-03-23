@@ -9,10 +9,9 @@ class ClientsController < ApplicationController
   
   
   def create
-    binding.pry
-    @client = Client.new
+    @client = Client.new(client_params)
     if @client.save
-      redirect to clients path
+      redirect_to clients_path
     else
       render :new
     end
@@ -27,4 +26,10 @@ class ClientsController < ApplicationController
 
   def destory
   end
+
+  private
+  def client_params
+    params.require(:client).permit(:image, :name, :gender, :address, :phone_number, :email).merge(user_id: current_user.id)
+  end
+
 end
