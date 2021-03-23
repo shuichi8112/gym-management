@@ -1,4 +1,50 @@
 <%= render "shared/second-header" %>
-  
+  <div class="main">
+  <div class="card devise-card">
+    <div class="form-wrap">
+      <div class="form-group text-center">
+      
+        <p class="text-success">SIXPACKがお客様を変える！</p>
+         <%= image_tag "gym-logo.png", class:"gym-icon-user"%>
+        <p class="text-secondary2">＊すべて入力は必須です。</p>
+      </div>
+      <%= form_with(model:@client,url: clients_path,local: true) do |f|%>
+      <%= render "shared/error_messages", model: f.object %>
+
+        <div class="form-group">
+          <%= f.label :image, "クライアント画像" %><br />
+          <%= f.file_field :image %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_field :name, autofocus: true, placeholder: "氏名", class: "form-control" %>
+        </div>
+        
+        <div class="form-group">
+          <%= f.text_field :gender, autofocus: true, placeholder: "性別", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_field :address, autofocus: true, placeholder: "住所", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_field :phone_number, autofocus: true, placeholder: "電話番号(090-1234-5678)", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_field :email, autofocus: true, placeholder: "メールアドレス", class: "form-control" %>
+        </div>
+
+        
+        <div class="actions">
+          <%= f.submit "会員登録する", class: "btn btn-success w-100" %>
+        </div>
+      <% end %>
+
+    
+    </div>
+  </div>
+</div>
 
 <%= render "shared/footer" %>
